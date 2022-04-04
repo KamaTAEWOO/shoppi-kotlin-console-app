@@ -1,5 +1,6 @@
 package screen
 
+import LINE_DIVIDER
 import data.CartItems
 import data.Product
 import extensions.getNotEmptyInt
@@ -26,7 +27,7 @@ class ShoppingProductList {
         val categoryProducts = categories[selectedCategory]
         if(!categoryProducts.isNullOrEmpty()) {
             println("""
-                ***=======================================
+                $LINE_DIVIDER
                 선택하신 [$selectedCategory] 카테고리 상품입니다.
             """.trimIndent())
             categoryProducts.forEachIndexed { index, product ->
@@ -41,7 +42,7 @@ class ShoppingProductList {
     private fun showCareOption(categoryProducts: List<Product>, selectedCategory: String) {
         println(
         """
-        ***=====================================
+        $LINE_DIVIDER
         장바구니에 담을 상품 번호를 선택해주세요.
         """.trimIndent()
         )
